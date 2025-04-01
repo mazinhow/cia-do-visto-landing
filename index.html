@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolão TOUFUT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: 'hsl(142.1 76.2% 36.3%)',
+                            dark: 'hsl(142.1 76.2% 26.3%)',
+                            light: 'hsl(142.1 76.2% 46.3%)',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Ensure smooth transitions */
+        .transition-colors {
+            transition-property: background-color, border-color, color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 200ms;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 dark:text-white transition-colors">
+    <!-- Navbar -->
+    <nav id="navbar" class="bg-primary text-white p-4 hidden">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Bolão TOUFUT</h1>
+            <div class="flex items-center gap-4">
+                <span id="userPoints" class="font-medium"></span>
+                <button onclick="toggleTheme()" class="p-2">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+                <button onclick="logout()" class="bg-primary-dark px-4 py-2 rounded hover:bg-opacity-90">Sair</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Auth Forms -->
+    <div id="authPage" class="min-h-screen flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md w-full max-w-md">
+            <div class="mb-6 border-b">
+                <button onclick="showLogin()" class="px-4 py-2 text-primary dark:text-primary-light" id="loginTab">Login</button>
+                <button onclick="showRegister()" class="px-4 py-2 text-gray-400" id="registerTab">Registro</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" onsubmit="login(event)" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-1 dark:text-gray-200">Username</label>
+                    <input type="text" name="username" required class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1 dark:text-gray-200">Senha</label>
+                    <input type="password" name="password" required class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                </div>
+                <button type="submit" class="w-full bg-primary text-white py-2 rounded hover:bg-opacity-90">Entrar</button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm" onsubmit="register(event)" class="space-y-4 hidden">
+                <div>
+                    <label class="block text-sm font-medium mb-1 dark:text-gray-200">Nome Completo</label>
+                    <input type="text" name="fullName" required class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1 dark:text-gray-200">Username</label>
+                    <input type="text" name="username" required class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1 dark:text-gray-200">Email</label>
+                    <input type="email" name="email" required class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1 dark:text-gray-200">Telefone</label>
+                    <input type="tel" name="phone" required class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1 dark:text-gray-200">CPF</label>
+                    <input type="text" name="cpf" required class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-1 dark:text-gray-200">Senha</label>
+                    <input type="password" name="password" required class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                </div>
+                <button type="submit" class="w-full bg-primary text-white py-2 rounded hover:bg-opacity-90">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="mainContent" class="container mx-auto p-4 hidden">
+        <!-- Tabs -->
+        <div class="mb-6 border-b">
+            <button onclick="showTab('games')" class="px-4 py-2 text-primary dark:text-primary-light" id="gamesTab">Jogos</button>
+            <button onclick="showTab('ranking')" class="px-4 py-2 text-gray-400" id="rankingTab">Ranking</button>
+            <button onclick="showTab('admin')" class="px-4 py-2 text-gray-400 hidden" id="adminTab">Admin</button>
+        </div>
+
+        <!-- Games List -->
+        <div id="gamesContent" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Games will be inserted here -->
+        </div>
+
+        <!-- Ranking Table -->
+        <div id="rankingContent" class="hidden">
+            <table class="w-full bg-white dark:bg-gray-800 shadow-md rounded">
+                <thead class="bg-gray-50 dark:bg-gray-700">
+                    <tr>
+                        <th class="px-6 py-3 text-left">Posição</th>
+                        <th class="px-6 py-3 text-left">Jogador</th>
+                        <th class="px-6 py-3 text-right">Pontos</th>
+                    </tr>
+                </thead>
+                <tbody id="rankingTable">
+                    <!-- Ranking will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Admin Panel -->
+        <div id="adminContent" class="hidden">
+            <div class="bg-white dark:bg-gray-800 p-4 rounded shadow-md mb-4">
+                <h2 class="text-xl font-bold mb-4">Adicionar Jogo</h2>
+                <form onsubmit="addGame(event)" class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1 dark:text-gray-200">Time Casa</label>
+                            <input type="text" name="homeTeam" required class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1 dark:text-gray-200">Time Visitante</label>
+                            <input type="text" name="awayTeam" required class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1 dark:text-gray-200">Data e Hora</label>
+                        <input type="datetime-local" name="startTime" required class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    </div>
+                    <button type="submit" class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90">Adicionar Jogo</button>
+                </form>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 p-4 rounded shadow-md">
+                <h2 class="text-xl font-bold mb-4">Gerenciar Jogos</h2>
+                <div id="adminGamesList" class="space-y-4">
+                    <!-- Admin games list will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Theme
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        // Initialize theme
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+
+        // Data structure
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+        let games = JSON.parse(localStorage.getItem('games')) || [];
+        let bets = JSON.parse(localStorage.getItem('bets')) || [];
+        let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+        // Authentication
+        function showLogin() {
+            document.getElementById('loginForm').classList.remove('hidden');
+            document.getElementById('registerForm').classList.add('hidden');
+            document.getElementById('loginTab').classList.add('text-primary');
+            document.getElementById('loginTab').classList.remove('text-gray-400');
+            document.getElementById('registerTab').classList.add('text-gray-400');
+            document.getElementById('registerTab').classList.remove('text-primary');
+        }
+
+        function showRegister() {
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('registerForm').classList.remove('hidden');
+            document.getElementById('loginTab').classList.add('text-gray-400');
+            document.getElementById('loginTab').classList.remove('text-primary');
+            document.getElementById('registerTab').classList.add('text-primary');
+            document.getElementById('registerTab').classList.remove('text-gray-400');
+        }
+
+        function login(event) {
+            event.preventDefault();
+            const username = event.target.username.value;
+            const password = event.target.password.value;
+
+            const user = users.find(u => u.username === username && u.password === password);
+            if (user) {
+                currentUser = user;
+                localStorage.setItem('currentUser', JSON.stringify(user));
+                showMainContent();
+            } else {
+                alert('Usuário ou senha inválidos');
+            }
+        }
+
+        function register(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+
+            // Validações
+            if (formData.get('cpf').length !== 11) {
+                alert('CPF deve ter 11 dígitos');
+                return;
+            }
+
+            if (formData.get('phone').length < 10 || formData.get('phone').length > 11) {
+                alert('Telefone deve ter 10 ou 11 dígitos');
+                return;
+            }
+
+            const user = {
+                id: users.length + 1,
+                username: formData.get('username'),
+                password: formData.get('password'),
+                fullName: formData.get('fullName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                cpf: formData.get('cpf'),
+                points: 0,
+                isAdmin: users.length < 2 // First two users are admins
+            };
+
+            if (users.some(u => u.username === user.username)) {
+                alert('Username já existe');
+                return;
+            }
+
+            if (users.some(u => u.cpf === user.cpf)) {
+                alert('CPF já cadastrado');
+                return;
+            }
+
+            if (users.some(u => u.email === user.email)) {
+                alert('Email já cadastrado');
+                return;
+            }
+
+            users.push(user);
+            localStorage.setItem('users', JSON.stringify(users));
+            currentUser = user;
+            localStorage.setItem('currentUser', JSON.stringify(user));
+            showMainContent();
+        }
+
+        function logout() {
+            currentUser = null;
+            localStorage.removeItem('currentUser');
+            document.getElementById('authPage').classList.remove('hidden');
+            document.getElementById('navbar').classList.add('hidden');
+            document.getElementById('mainContent').classList.add('hidden');
+        }
+
+        // Main Content
+        function showMainContent() {
+            document.getElementById('authPage').classList.add('hidden');
+            document.getElementById('navbar').classList.remove('hidden');
+            document.getElementById('mainContent').classList.remove('hidden');
+            document.getElementById('userPoints').textContent = `${currentUser.points} pontos`;
+
+            if (currentUser.isAdmin) {
+                document.getElementById('adminTab').classList.remove('hidden');
+            }
+
+            showTab('games');
+            updateGames();
+            updateRanking();
+        }
+
+        function showTab(tab) {
+            // Hide all content
+            document.getElementById('gamesContent').classList.add('hidden');
+            document.getElementById('rankingContent').classList.add('hidden');
+            document.getElementById('adminContent').classList.add('hidden');
+
+            // Show selected content
+            document.getElementById(`${tab}Content`).classList.remove('hidden');
+
+            // Update tab styles
+            document.getElementById('gamesTab').classList.add('text-gray-400');
+            document.getElementById('gamesTab').classList.remove('text-primary');
+            document.getElementById('rankingTab').classList.add('text-gray-400');
+            document.getElementById('rankingTab').classList.remove('text-primary');
+            if (document.getElementById('adminTab')) {
+                document.getElementById('adminTab').classList.add('text-gray-400');
+                document.getElementById('adminTab').classList.remove('text-primary');
+            }
+            document.getElementById(`${tab}Tab`).classList.remove('text-gray-400');
+            document.getElementById(`${tab}Tab`).classList.add('text-primary');
+
+            if (tab === 'admin') {
+                updateAdminGames();
+            }
+        }
+
+        // Games
+        function updateGames() {
+            const container = document.getElementById('gamesContent');
+            container.innerHTML = '';
+
+            const now = new Date();
+            games.forEach(game => {
+                const userBet = bets.find(b => b.gameId === game.id && b.userId === currentUser.id);
+                const gameDate = new Date(game.startTime);
+                const canBet = !game.isFinished && gameDate > now;
+
+                const card = document.createElement('div');
+                card.className = 'bg-white dark:bg-gray-800 p-4 rounded shadow-md';
+                card.innerHTML = `
+                    <div class="text-center mb-4">
+                        <span class="text-sm text-gray-500 dark:text-gray-400">${gameDate.toLocaleString()}</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-medium">${game.homeTeam}</span>
+                        ${game.isFinished 
+                            ? `<span class="text-xl font-bold">${game.homeScore}</span>`
+                            : canBet 
+                                ? `<input type="number" min="0" class="w-16 text-center p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white" id="home_${game.id}">`
+                                : ''}
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-medium">${game.awayTeam}</span>
+                        ${game.isFinished 
+                            ? `<span class="text-xl font-bold">${game.awayScore}</span>`
+                            : canBet 
+                                ? `<input type="number" min="0" class="w-16 text-center p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white" id="away_${game.id}">`
+                                : ''}
+                    </div>
+                    ${userBet ? `
+                        <div class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                            Sua aposta: ${userBet.homeScore} - ${userBet.awayScore}
+                            ${userBet.points > 0 ? ` (${userBet.points} pts)` : ''}
+                        </div>
+                    ` : ''}
+                    ${canBet && !userBet ? `
+                        <button onclick="placeBet(${game.id})" class="w-full bg-primary text-white py-2 rounded hover:bg-opacity-90 mt-4">
+                            Apostar
+                        </button>
+                    ` : ''}
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function placeBet(gameId) {
+            const homeScore = parseInt(document.getElementById(`home_${gameId}`).value);
+            const awayScore = parseInt(document.getElementById(`away_${gameId}`).value);
+
+            if (isNaN(homeScore) || isNaN(awayScore)) {
+                alert('Por favor, preencha o placar');
+                return;
+            }
+
+            const bet = {
+                id: bets.length + 1,
+                userId: currentUser.id,
+                gameId,
+                homeScore,
+                awayScore,
+                points: 0
+            };
+
+            bets.push(bet);
+            localStorage.setItem('bets', JSON.stringify(bets));
+            updateGames();
+        }
+
+        // Ranking
+        function updateRanking() {
+            const tbody = document.getElementById('rankingTable');
+            tbody.innerHTML = '';
+
+            const sortedUsers = [...users].sort((a, b) => b.points - a.points);
+            sortedUsers.forEach((user, index) => {
+                const row = document.createElement('tr');
+                row.className = user.id === currentUser.id ? 'bg-primary bg-opacity-10' : '';
+                row.innerHTML = `
+                    <td class="px-6 py-4">
+                        ${index < 3 
+                            ? `<i class="fas fa-trophy ${index === 0 ? 'text-yellow-500' : index === 1 ? 'text-gray-400' : 'text-amber-600'}"></i>` 
+                            : index + 1}
+                    </td>
+                    <td class="px-6 py-4">${user.fullName}</td>
+                    <td class="px-6 py-4 text-right">${user.points}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Admin
+        function addGame(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const game = {
+                id: games.length + 1,
+                homeTeam: formData.get('homeTeam'),
+                awayTeam: formData.get('awayTeam'),
+                startTime: new Date(formData.get('startTime')).toISOString(),
+                isFinished: false
+            };
+
+            games.push(game);
+            localStorage.setItem('games', JSON.stringify(games));
+            event.target.reset();
+            updateGames();
+            updateAdminGames();
+        }
+
+        function updateAdminGames() {
+            if (!currentUser.isAdmin) return;
+
+            const container = document.getElementById('adminGamesList');
+            container.innerHTML = '';
+
+            games.forEach(game => {
+                const div = document.createElement('div');
+                div.className = 'border-b dark:border-gray-700 pb-4';
+                div.innerHTML = `
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-medium">${game.homeTeam} vs ${game.awayTeam}</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">${new Date(game.startTime).toLocaleString()}</p>
+                        </div>
+                        ${!game.isFinished ? `
+                            <div class="flex items-center gap-2">
+                                <input type="number" min="0" class="w-16 p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white" id="admin_home_${game.id}">
+                                <input type="number" min="0" class="w-16 p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white" id="admin_away_${game.id}">
+                                <button onclick="setScore(${game.id})" class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90">
+                                    Definir Placar
+                                </button>
+                            </div>
+                        ` : `
+                            <div class="text-lg font-bold">
+                                ${game.homeScore} - ${game.awayScore}
+                            </div>
+                        `}
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function setScore(gameId) {
+            const homeScore = parseInt(document.getElementById(`admin_home_${gameId}`).value);
+            const awayScore = parseInt(document.getElementById(`admin_away_${gameId}`).value);
+
+            if (isNaN(homeScore) || isNaN(awayScore)) {
+                alert('Por favor, preencha o placar');
+                return;
+            }
+
+            const game = games.find(g => g.id === gameId);
+            game.homeScore = homeScore;
+            game.awayScore = awayScore;
+            game.isFinished = true;
+
+            // Update points
+            const gameBets = bets.filter(b => b.gameId === gameId);
+            gameBets.forEach(bet => {
+                if (bet.homeScore === homeScore && bet.awayScore === awayScore) {
+                    bet.points = 3;
+                    const user = users.find(u => u.id === bet.userId);
+                    user.points += 3;
+                }
+            });
+
+            localStorage.setItem('games', JSON.stringify(games));
+            localStorage.setItem('users', JSON.stringify(users));
+            localStorage.setItem('bets', JSON.stringify(bets));
+
+            updateGames();
+            updateAdminGames();
+            updateRanking();
+
+            if (currentUser) {
+                currentUser = users.find(u => u.id === currentUser.id);
+                localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                document.getElementById('userPoints').textContent = `${currentUser.points} pontos`;
+            }
+        }
+
+        // Initialize
+        if (currentUser) {
+            showMainContent();
+        }
+    </script>
+</body>
+</html>
