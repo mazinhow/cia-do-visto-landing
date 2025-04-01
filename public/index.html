@@ -1,497 +1,147 @@
-
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Cia do Visto - Visto Americano com Facilidade</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Roboto&amp;display=swap" rel="stylesheet"/>
-<style>
-    :root {
-      --azul-marinho: #003366;
-      --branco: #ffffff;
-      --verde: #2ecc71;
-      --cinza-claro: #f9f9f9;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--branco);
-      color: var(--azul-marinho);
-    }
-
-    header {
-      padding: 20px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: var(--branco);
-    }
-
-    .logo img {
-      height: 50px;
-    }
-
-    .btn-header {
-      background-color: var(--verde);
-      color: var(--branco);
-      padding: 12px 20px;
-      text-decoration: none;
-      border-radius: 5px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cia do Visto</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <meta name="description" content="Consultoria especializada em visto americano de turismo com mais de 95% de aprovação. Atendimento ágil, humanizado e eficiente.">
+  <meta name="keywords" content="visto americano, consultoria visto EUA, DS-160, turismo Estados Unidos, entrevista consular">
+  <meta property="og:title" content="Cia do Visto - Visto Americano com Facilidade e Segurança">
+  <meta property="og:description" content="Especialistas em visto de turismo para os EUA. Atendimento personalizado e suporte completo.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ciadovisto.com.br/ogimage.jpg">
+  <meta property="og:url" content="https://ciadovisto.com.br">
+  <style>
+    body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+    header { background-color: #003366; padding: 20px; text-align: center; }
+    header img { max-height: 60px; }
+    h1, h2 { font-family: 'Montserrat', sans-serif; }
+    main { padding: 40px 20px; text-align: center; }
+    .btn { background: #2ecc71; color: white; padding: 15px 30px; border-radius: 8px; font-weight: bold; text-decoration: none; }
+    .whatsapp-float-mobile {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      background-color: #2ecc71;
+      color: #fff;
+      padding: 14px 22px;
+      border-radius: 30px;
       font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn-header:hover {
-      background-color: #27ae60;
-    }
-
-    .hero {
-      background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)),
-        url('https://images.unsplash.com/photo-1570366584159-4c5b1e04d8e7?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
-      color: var(--branco);
-      padding: 100px 5%;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-
-    .btn-cta {
-      background-color: var(--verde);
-      color: var(--branco);
-      padding: 15px 30px;
-      font-size: 18px;
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    .section {
-      padding: 80px 5%;
-      text-align: center;
-    }
-
-    .section h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 28px;
-      margin-bottom: 40px;
-    }
-
-    .benefits, .faq {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-
-    .card {
-      background-color: var(--cinza-claro);
-      border-radius: 10px;
-      padding: 30px;
-      width: 280px;
-    }
-
-    .card h3 {
-      font-family: 'Montserrat', sans-serif;
-      margin-bottom: 10px;
-    }
-
-    .formulario {
-      background-color: var(--azul-marinho);
-      color: var(--branco);
-      padding: 60px 5%;
-    }
-
-    .formulario h2 {
-      font-family: 'Montserrat', sans-serif;
-      margin-bottom: 30px;
-    }
-
-    form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input, select, button {
-      padding: 14px;
-      border-radius: 5px;
-      border: none;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       font-size: 16px;
     }
-
-    button {
-      background-color: var(--verde);
-      color: var(--branco);
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background-color: #27ae60;
-    }
-
-    footer {
-      background-color: var(--cinza-claro);
-      padding: 40px 5%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      font-size: 14px;
-    }
-
-    .footer-col {
-      margin-bottom: 20px;
-    }
-
-    .footer-col strong {
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: var(--verde);
-      color: var(--branco);
-      padding: 12px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      z-index: 1000;
-    }
-
-    details summary {
-      cursor: pointer;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 26px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .benefits, .faq {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .card {
-        width: 100%;
-      }
-
-      form {
-        width: 100%;
-      }
+    @media(min-width: 768px) {
+      .whatsapp-float-mobile { display: none; }
     }
   </style>
-<link href="favicon.ico" rel="icon" type="image/x-icon"/><meta content="Consultoria especializada em visto americano de turismo com mais de 95% de aprovação. Atendimento ágil, humanizado e eficiente." name="description"/><meta content="visto americano, consultoria visto EUA, DS-160, turismo Estados Unidos, entrevista consular" name="keywords"/><meta content="Cia do Visto - Visto Americano com Facilidade e Segurança" property="og:title"/><meta content="Especialistas em visto de turismo para os EUA. Atendimento personalizado e suporte completo." property="og:description"/><meta content="website" property="og:type"/><meta content="https://ciadovisto.com.br/ogimage.jpg" property="og:image"/><meta content="https://ciadovisto.com.br" property="og:url"/></head>
+</head>
 <body>
+
 <header>
-<div class="logo">
-<img alt="Logo Cia do Visto" src="logo.png"/>
-</div>
-<a class="btn-header" href="#formulario">Solicite sua Consultoria</a>
+  <img src="logo.png" alt="Cia do Visto">
 </header>
-<section class="hero">
-<h1>Conquiste seu Visto Americano com Facilidade e Segurança!</h1>
-<p>Consultoria especializada para vistos turísticos aos EUA com mais de 95% de aprovação.</p>
-<a class="btn-cta" href="#formulario">Quero meu Visto Agora!</a>
-</section>
-<section class="section" style="background-color: #F9F9F9;">
-<h2>Como Funciona o Processo</h2>
-<div class="benefits">
-<div class="card">
-<h3>1. Solicite Consultoria</h3>
-<p>Preencha o formulário em poucos segundos e inicie sua jornada.</p>
-</div>
-<div class="card">
-<h3>2. Formulário DS-160</h3>
-<p>Nosso time preenche seu formulário com precisão e segurança.</p>
-</div>
-<div class="card">
-<h3>3. Entrevista Consular</h3>
-<p>Você recebe um treinamento exclusivo para se sair bem na entrevista.</p>
-</div>
-<div class="card">
-<h3>4. Receba seu Visto</h3>
-<p>Acompanhamos tudo até você ter o visto em mãos com tranquilidade.</p>
-</div>
-</div>
-</section>
-<section class="section">
-<h2>Escolha o Plano Ideal para Você</h2>
-<div class="benefits">
-<div class="card">
-<h3>Essential</h3>
-<p><strong>R$ 499,00 ou 12x</strong></p>
-<ul>
-<li>Consultoria online</li>
-<li>Preenchimento do DS-160</li>
-<li>Checklist completo</li>
-<li>Suporte básico</li>
-</ul>
-</div>
-<div class="card" style="border: 3px solid #2ECC71;">
-<h3>Premium - Mais Popular!</h3>
-<p><strong>R$ 999,00 ou 12x</strong></p>
-<ul>
-<li>Tudo do Essential</li>
-<li>Simulação da entrevista</li>
-<li>Revisão detalhada</li>
-<li>Suporte prioritário 24h</li>
-<li>Pós-atendimento até emissão</li>
-</ul>
-</div>
-<div class="card">
-<h3>Família / Grupo</h3>
-<p><strong>Preço sob consulta</strong></p>
-<ul>
-<li>Consultoria em grupo</li>
-<li>Descontos progressivos</li>
-<li>Atendimento personalizado</li>
-</ul>
-</div>
-</div>
-</section>
-<section class="section" style="background-color: #F9F9F9;">
-<h2>O que nossos clientes dizem</h2>
-<div class="benefits">
-<div class="card"><p>“Tudo muito fácil e com suporte incrível! Consegui meu visto em 1 mês.”</p><strong>Juliana M. – São Paulo</strong></div>
-<div class="card"><p>“Foram impecáveis no atendimento, explicação e suporte.”</p><strong>Carlos T. – Recife</strong></div>
-<div class="card"><p>“Me senti segura do início ao fim. Super recomendo!”</p><strong>Ana &amp; Lucas – Curitiba</strong></div>
-</div>
-</section>
-<section class="section">
-<h2>Perguntas Frequentes</h2>
-<div class="faq">
-<details><summary>Quais documentos são necessários?</summary><p>Passaporte válido, foto recente, dados pessoais e profissionais.</p></details>
-<details><summary>Quanto tempo demora o processo?</summary><p>Em média de 4 a 6 semanas, dependendo da agenda do consulado.</p></details>
-<details><summary>Se o visto for negado, terei suporte?</summary><p>Sim! Analisamos o motivo da negativa e oferecemos estratégia de reentrada.</p></details>
-</div>
-</section>
-<section class="formulario" id="formulario">
-<h2>Inicie agora seu processo de visto!</h2>
-<form id="formularioPrincipal" method="POST" onsubmit="return enviarFormularioPrincipal();">
-<input name="nome" placeholder="Nome Completo" required="" type="text"/>
-<input name="telefone" placeholder="WhatsApp" required="" type="tel"/>
-<input name="email" placeholder="E-mail" required="" type="email"/>
-<select name="tipo-visto" required="">
-<option value="">Tipo de Visto</option>
-<option value="turismo">Turismo</option>
-<option value="negocios">Negócios</option>
-</select>
-<button type="submit">Solicitar Consultoria Agora!</button>
-</form>
-</section>
-<footer>
-<div class="footer-col">
-<strong>Cia do Visto</strong>
-      São Bernardo do Campo - SP<br/>
-      contato@ciadovisto.com<br/>
-      (11) 99999-9999
+
+<main>
+  <h1>Conquiste seu Visto Americano com Facilidade e Segurança!</h1>
+  <p>Consultoria especializada para vistos turísticos aos EUA com mais de 95% de aprovação.</p>
+  <a class="btn" href="#formulario">Quero meu Visto Agora!</a>
+</main>
+
+<section id="quiz" style="padding: 60px 20px; text-align: center; background-color: #eaf6ff; margin-bottom: 50px;">
+  <h2>Você está pronto para tirar o visto?</h2>
+  <p>Responda 3 perguntas rápidas e receba orientação exclusiva</p>
+  <div id="quiz-steps" style="max-width: 500px; margin: 0 auto; text-align: left;">
+    <div id="progress-container" style="background: #ccc; border-radius: 30px; height: 10px; margin-bottom: 30px;">
+      <div id="progress-bar" style="width: 33%; height: 100%; background: #003366; border-radius: 30px;"></div>
     </div>
-<div class="footer-col">
-<strong>Links úteis</strong>
-<p>Termos de uso</p>
-<p>Política de privacidade</p>
-<p>FAQ</p>
-</div>
-<div class="footer-col">
-<strong>Redes sociais</strong>
-<p>Instagram | Facebook | LinkedIn</p>
-</div>
-</footer>
-<a class="whatsapp-btn" href="https://wa.me/55SEUNUMERO">Fale com um especialista</a>
-<div id="popup-exit" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.8); z-index: 9999; align-items: center; justify-content: center; color: white;
-    text-align: center; padding: 30px;">
-<div style="background-color: #003366; padding: 40px; border-radius: 12px; max-width: 500px;">
-<h2 style="margin-bottom: 20px;">Não vá ainda!</h2>
-<p>Solicite sua consultoria agora e receba grátis um guia com as 10 maiores causas de visto negado!</p>
-<a class="btn-cta" href="#formulario" style="margin-top: 20px; display: inline-block;">Quero o guia gratuito</a>
-</div>
-</div>
-<script>
-    let hasShownPopup = false;
-    document.addEventListener("mouseout", function(e) {
-      if (!hasShownPopup && !e.toElement && !e.relatedTarget) {
-        document.getElementById('popup-exit').style.display = 'flex';
-        hasShownPopup = true;
-      }
-    });
-  </script>
-<script>
-  document.querySelector("form").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const nome = document.querySelector("input[name='nome']").value;
-    const telefone = document.querySelector("input[name='telefone']").value;
-    const email = document.querySelector("input[name='email']").value;
-    const tipoVisto = document.querySelector("select[name='tipo-visto']").value;
-
-    const msg = `Olá! Gostaria de iniciar meu processo de visto.%0A%0A*Nome:* ${encodeURIComponent(nome)}%0A*WhatsApp:* ${encodeURIComponent(telefone)}%0A*Email:* ${encodeURIComponent(email)}%0A*Tipo de visto:* ${encodeURIComponent(tipoVisto)}`;
-
-    const link = `https://wa.me/5565999207108?text=${msg}`;
-    window.open(link, '_blank');
-  });
-</script>
-<script>
-  function validarFormulario() {
-    const nome = document.querySelector("input[name='nome']").value.trim();
-    const telefone = document.querySelector("input[name='telefone']").value.trim();
-    const email = document.querySelector("input[name='email']").value.trim();
-    const tipoVisto = document.querySelector("select[name='tipo-visto']").value;
-
-    if (!nome || nome.length < 3) {
-      alert("Por favor, preencha seu nome completo.");
-      return false;
-    }
-
-    const telefoneRegex = /^\d{10,15}$/;
-    if (!telefoneRegex.test(telefone.replace(/\D/g, ''))) {
-      alert("Por favor, insira um número de WhatsApp válido (apenas números).");
-      return false;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      alert("Por favor, insira um email válido.");
-      return false;
-    }
-
-    if (!tipoVisto) {
-      alert("Por favor, selecione o tipo de visto.");
-      return false;
-    }
-
-    window.location.href = 'thankyou-com-video.html';
-    return false;
-  }
-</script>
-<script>
-  function enviarFormularioPrincipal() {
-    const form = document.getElementById("formularioPrincipal");
-    const url = "https://script.google.com/macros/s/AKfycbzoqc35FxtY4sasDaxi0Q_lEE2X5XdG8b8HpTq0yVGlQdUB1BXapupBf9BrrhpGRFvs/exec";
-    const formData = new FormData();
-
-    formData.append("nome", form.querySelector("input[name='nome']").value);
-    formData.append("telefone", form.querySelector("input[name='telefone']").value);
-    formData.append("email", form.querySelector("input[name='email']").value);
-    formData.append("tipoVisto", form.querySelector("select[name='tipo-visto']").value);
-    formData.append("origem", window.location.href);
-
-    fetch(url, { method: "POST", body: formData })
-      .then(() => {
-        window.location.href = 'thankyou-com-video.html';
-      })
-      .catch(err => alert("Erro ao enviar. Tente novamente mais tarde."));
-    return false;
-  }
-</script>
-<script>
-  let currentStep = 1;
-  function nextStep(step) {
-    document.getElementById("step" + step).style.display = "none";
-    document.getElementById("step" + (step + 1)).style.display = "block";
-    const bar = document.getElementById("progress-bar");
-    if (step === 1) bar.style.width = "66%";
-    if (step === 2) bar.style.width = "100%";
-  }
-
-  function enviarQuiz() {
-    const form = document.getElementById("quizForm");
-    const url = "https://script.google.com/macros/s/AKfycbzoqc35FxtY4sasDaxi0Q_lEE2X5XdG8b8HpTq0yVGlQdUB1BXapupBf9BrrhpGRFvs/exec";
-    const formData = new FormData();
-
-    formData.append("jaTirou", form.querySelector("select[name='jaTirou']").value);
-    formData.append("temViagem", form.querySelector("select[name='temViagem']").value);
-    formData.append("atendimento", form.querySelector("select[name='atendimento']").value);
-    formData.append("origem", window.location.href);
-
-    fetch(url, { method: "POST", body: formData })
-      .then(() => {
-        const atendimento = form.querySelector("select[name='atendimento']").value;
-        const redirectLink = atendimento === "Presencial"
-          ? "https://wa.me/5565999207108?text=Gostaria%20de%20um%20atendimento%20presencial%20sobre%20o%20visto."
-          : "https://wa.me/5565999207108?text=Gostaria%20de%20um%20atendimento%20online%20sobre%20o%20visto.";
-        window.location.href = redirectLink;
-      })
-      .catch(err => alert("Erro ao enviar. Tente novamente mais tarde."));
-    return false;
-  }
-</script>
-<section id="quiz" style="padding: 50px 20px; text-align: center; background-color: #eaf6ff;">
-<h2 style="font-family: 'Montserrat', sans-serif; font-size: 24px; margin-bottom: 10px;">Você está pronto para tirar o visto?</h2>
-<p style="font-size: 18px; margin-bottom: 30px;">Responda 3 perguntas rápidas e receba orientação exclusiva</p>
-<div id="quiz-steps" style="max-width: 500px; margin: 0 auto; text-align: left;">
-<div id="progress-container" style="background: #ccc; border-radius: 30px; height: 10px; margin-bottom: 30px;">
-<div id="progress-bar" style="width: 33%; height: 100%; background: #003366; border-radius: 30px;"></div>
-</div>
-<form id="quizForm" method="POST" onsubmit="return enviarQuiz();">
-<div class="step" id="step1">
-<label>1. Já tirou visto antes?</label><br/>
-<select name="jaTirou" required=""><option value="">Selecione</option><option>Sim</option><option>Não</option></select><br/><br/>
-<button onclick="nextStep(1)" type="button">Próximo</button>
-</div>
-<div class="step" id="step2" style="display:none;">
-<label>2. Tem viagem marcada?</label><br/>
-<select name="temViagem" required=""><option value="">Selecione</option><option>Sim</option><option>Não</option></select><br/><br/>
-<button onclick="nextStep(2)" type="button">Próximo</button>
-</div>
-<div class="step" id="step3" style="display:none;">
-<label>3. Deseja atendimento online ou presencial?</label><br/>
-<select name="atendimento" required=""><option value="">Selecione</option><option>Online</option><option>Presencial</option></select><br/><br/>
-<button type="submit">Finalizar</button>
-</div>
-</form>
-</div>
+    <form id="quizForm" onsubmit="return enviarQuiz();" method="POST">
+      <div class="step" id="step1">
+        <label>1. Já tirou visto antes?</label><br/>
+        <select name="jaTirou" required><option value="">Selecione</option><option>Sim</option><option>Não</option></select><br/><br/>
+        <button type="button" onclick="nextStep(1)">Próximo</button>
+      </div>
+      <div class="step" id="step2" style="display:none;">
+        <label>2. Tem viagem marcada?</label><br/>
+        <select name="temViagem" required><option value="">Selecione</option><option>Sim</option><option>Não</option></select><br/><br/>
+        <button type="button" onclick="nextStep(2)">Próximo</button>
+      </div>
+      <div class="step" id="step3" style="display:none;">
+        <label>3. Deseja atendimento online ou presencial?</label><br/>
+        <select name="atendimento" required><option value="">Selecione</option><option>Online</option><option>Presencial</option></select><br/><br/>
+        <button type="submit">Finalizar</button>
+      </div>
+    </form>
+  </div>
 </section>
 
-<div id="popup-saida" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:10000; justify-content:center; align-items:center;">
-<div style="background:#003366; color:white; padding:30px 20px; border-radius:10px; max-width:400px; text-align:center; position:relative;">
-<span onclick="fecharPopup()" style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer;">×</span>
-<h2 style="margin-bottom:15px;">Não vá ainda!</h2>
-<p style="margin-bottom:20px;">Solicite sua consultoria agora e receba grátis um guia com as 10 maiores causas de visto negado!</p>
-<a href="https://wa.me/5565999207108?text=Quero%20receber%20o%20guia%20com%20as%2010%20maiores%20causas%20de%20visto%20negado" style="background:#2ecc71; color:white; padding:12px 20px; border-radius:8px; font-weight:bold; text-decoration:none;" target="_blank">Quero o guia gratuito</a>
-</div>
-</div>
+<section id="formulario" style="background:#fff; padding: 40px 20px;">
+  <h2>Inicie agora seu processo de visto!</h2>
+  <form id="formularioPrincipal" onsubmit="return enviarFormularioPrincipal();" method="POST" style="max-width: 500px; margin: 0 auto; text-align: left;">
+    <label>Nome Completo:</label><br/>
+    <input name="nome" required style="width:100%;padding:10px;margin-bottom:10px;"><br/>
+    <label>Telefone (WhatsApp):</label><br/>
+    <input name="telefone" required style="width:100%;padding:10px;margin-bottom:10px;"><br/>
+    <label>Email:</label><br/>
+    <input name="email" type="email" required style="width:100%;padding:10px;margin-bottom:10px;"><br/>
+    <label>Tipo de visto:</label><br/>
+    <select name="tipo-visto" required style="width:100%;padding:10px;margin-bottom:20px;">
+      <option value="">Selecione</option>
+      <option>Turismo</option>
+      <option>Negócios</option>
+    </select><br/>
+    <button type="submit" class="btn">Solicitar Consultoria Agora!</button>
+  </form>
+</section>
+
+<a href="https://wa.me/5565999207108" class="whatsapp-float-mobile">💬 Fale com um especialista</a>
 
 <script>
-  function fecharPopup() {
-    document.getElementById("popup-saida").style.display = "none";
-    localStorage.setItem("popupVisto", "sim");
-  }
+function nextStep(step) {
+  document.getElementById("step" + step).style.display = "none";
+  document.getElementById("step" + (step + 1)).style.display = "block";
+  const bar = document.getElementById("progress-bar");
+  if (step === 1) bar.style.width = "66%";
+  if (step === 2) bar.style.width = "100%";
+}
 
-  document.addEventListener("mouseout", function(e) {
-    if (!localStorage.getItem("popupVisto") && e.clientY < 50) {
-      document.getElementById("popup-saida").style.display = "flex";
-    }
-  });
+function enviarQuiz() {
+  const form = document.getElementById("quizForm");
+  const url = "https://script.google.com/macros/s/AKfycbzoqc35FxtY4sasDaxi0Q_lEE2X5XdG8b8HpTq0yVGlQdUB1BXapupBf9BrrhpGRFvs/exec";
+  const formData = new FormData(form);
+  formData.append("origem", window.location.href);
+
+  fetch(url, { method: "POST", body: formData })
+    .then(() => {
+      const atendimento = form.querySelector("select[name='atendimento']").value;
+      const redirect = atendimento === "Presencial"
+        ? "https://wa.me/5565999207108?text=Quero%20atendimento%20presencial"
+        : "https://wa.me/5565999207108?text=Quero%20atendimento%20online";
+      window.location.href = redirect;
+    })
+    .catch(() => alert("Erro ao enviar o quiz."));
+  return false;
+}
+
+function enviarFormularioPrincipal() {
+  const form = document.getElementById("formularioPrincipal");
+  const url = "https://script.google.com/macros/s/AKfycbzoqc35FxtY4sasDaxi0Q_lEE2X5XdG8b8HpTq0yVGlQdUB1BXapupBf9BrrhpGRFvs/exec";
+  const formData = new FormData();
+  formData.append("nome", form.querySelector("input[name='nome']").value);
+  formData.append("telefone", form.querySelector("input[name='telefone']").value);
+  formData.append("email", form.querySelector("input[name='email']").value);
+  formData.append("tipoVisto", form.querySelector("select[name='tipo-visto']").value);
+  formData.append("origem", window.location.href);
+
+  fetch(url, { method: "POST", body: formData })
+    .then(() => window.location.href = "thankyou-com-video.html")
+    .catch(() => alert("Erro ao enviar formulário."));
+  return false;
+}
 </script>
+
 </body>
 </html>
