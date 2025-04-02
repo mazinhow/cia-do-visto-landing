@@ -756,7 +756,7 @@
             const formData = new FormData(form);
             formData.append('Data_Envio', new Date().toLocaleString('pt-BR'));
 
-            fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', { // Substitua por sua URL do Google Apps Script
+            fetch('https://script.google.com/macros/s/AKfycbyjQowBo4iz1rH1uiyqD8tXXX2p6uYfL-qOGg0ir-1kSA1E_NS7gj6M40e4SHdOuLoN/exec', { // Substitua por sua URL do Google Apps Script
                 method: 'POST',
                 body: formData
             })
