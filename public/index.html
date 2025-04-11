@@ -81,11 +81,20 @@
         #etapas .steps { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         #etapas .step { flex: 1 1 220px; }
         #etapas i { font-size: 1.8rem; color: #2ECC71; padding: 12px; border-radius: 50%; background: #F5F8FA; }
-        #depoimentos .carousel { display: flex; overflow-x: auto; gap: 25px; padding-bottom: 15px; scroll-behavior: smooth; }
+        #depoimentos .carousel { 
+            display: flex; 
+            overflow-x: auto; 
+            gap: 25px; 
+            padding-bottom: 15px; 
+            scroll-behavior: smooth; 
+            scrollbar-width: thin; 
+            scrollbar-color: #2ECC71 #F5F8FA; 
+        }
         #depoimentos .card { min-width: 300px; position: relative; }
         #depoimentos img { border-radius: 50%; width: 90px; height: 90px; object-fit: cover; }
         #depoimentos .social-link { position: absolute; bottom: 15px; right: 15px; font-size: 1.5rem; color: #2ECC71; }
         #planos .highlight { border: 6px solid #2ECC71; background: #F9F9F9; }
+        #planos .highlight p:first-of-type { background: #E74C3C; color: white; padding: 8px; border-radius: 20px; font-weight: bold; display: inline-block; }
         #planos .card p:nth-of-type(2) { font-size: 1.3em; font-weight: bold; color: #2ECC71; }
         #planos ul { list-style: none; text-align: left; margin: 20px 0; }
         #planos ul li { margin: 8px 0; }
@@ -259,6 +268,11 @@
                     <p>“Atendimento excepcional!” - João P.</p>
                     <a href="https://instagram.com/joao_p" class="social-link" aria-label="Instagram de João"><i class="fa-brands fa-instagram"></i></a>
                 </div>
+                <div class="card">
+                    <img src="https://ciadovisto.com.br/imagens/maria.jpg" alt="Foto de Maria L." loading="lazy">
+                    <p>“Recomendo muito! Equipe super atenciosa.” - Maria L.</p>
+                    <a href="https://instagram.com/maria_l" class="social-link" aria-label="Instagram de Maria"><i class="fa-brands fa-instagram"></i></a>
+                </div>
             </div>
         </div>
     </section>
@@ -270,30 +284,40 @@
             <div class="grid-3">
                 <div class="card">
                     <h3>Basic</h3>
-                    <p>R$ 499,00 ou 3x de R$ 166,33</p>
+                    <p>R$ 499,00</p>
+                    <p>ou 3x de R$ 166,33</p>
                     <ul>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Preenchimento DS-160</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Agendamento em até 7 dias</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Suporte básico</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Preenchimento completo do DS-160</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Agendamento em até 7 dias úteis</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Suporte básico por e-mail</li>
+                        <li><i class="fa-solid fa-times" style="color: #E74C3C;"></i> Suporte prioritário via WhatsApp</li>
+                        <li><i class="fa-solid fa-times" style="color: #E74C3C;"></i> Fast Pass™</li>
                     </ul>
                     <a href="https://pay.kiwify.com.br/PqgQ7J7" class="btn" target="_blank" aria-label="Escolher Plano Basic">Escolher Basic</a>
                 </div>
                 <div class="card highlight">
-                    <h3>Ultra - Mais Popular!</h3>
-                    <p>R$ 999,00 ou 12x de R$ 99,90</p>
+                    <p>Mais Popular!</p>
+                    <h3>Ultra</h3>
+                    <p>R$ 999,00</p>
+                    <p>ou 12x de R$ 99,90</p>
                     <ul>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Preenchimento DS-160</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Agendamento em até 2 dias</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Suporte prioritário</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Fast Pass™</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Preenchimento completo do DS-160</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Agendamento em até 2 dias úteis</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Suporte prioritário via WhatsApp</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Fast Pass™ para agilizar o processo</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Revisão detalhada antes da entrevista</li>
                     </ul>
                     <a href="https://pay.kiwify.com.br/UHey3Ux" class="btn" target="_blank" aria-label="Escolher Plano Ultra">Escolher Ultra</a>
                 </div>
                 <div class="card">
                     <h3>Família/Grupo</h3>
                     <p>Preço sob consulta</p>
+                    <p>Descontos exclusivos para grupos</p>
                     <ul>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Descontos para grupos</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Preenchimento do DS-160 para todos</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Agendamento coordenado</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Suporte personalizado</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Descontos progressivos por pessoa</li>
                     </ul>
                     <a href="https://wa.me/5565999207108" class="btn" target="_blank" aria-label="Solicitar cotação para Família/Grupo">Solicitar Cotação</a>
                 </div>
@@ -306,7 +330,7 @@
         <div class="container">
             <h2>Inicie Seu Processo Agora!</h2>
             <p class="guarantee">Seus dados estão 100% seguros!</p>
-            <form id="consultoria-form">
+            <form id="consultoria-form" method="POST">
                 <label for="nome">Nome Completo:</label>
                 <input id="nome" name="nome" required aria-required="true">
                 <label for="telefone">Telefone (WhatsApp):</label>
@@ -314,13 +338,13 @@
                 <label for="email">Email:</label>
                 <input id="email" name="email" type="email" required aria-required="true">
                 <label for="tipo-visto">Tipo de Visto:</label>
-                <select id="tipo-visto" name="tipo-visto" required aria-required="true">
+                <select id="tipo-visto" name="tipoVisto" required aria-required="true">
                     <option value="">Selecione</option>
                     <option value="Turismo">Turismo</option>
                     <option value="Negócios">Negócios</option>
                 </select>
                 <label for="como-encontrou">Como nos encontrou? (opcional)</label>
-                <select id="como-encontrou" name="como-encontrou">
+                <select id="como-encontrou" name="comoEncontrou">
                     <option value="">Selecione</option>
                     <option value="Instagram">Instagram</option>
                     <option value="Google">Google</option>
@@ -373,30 +397,23 @@
         const form = document.getElementById('consultoria-form');
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            const data = {
-                nome: document.getElementById('nome').value,
-                telefone: document.getElementById('telefone').value,
-                email: document.getElementById('email').value,
-                tipoVisto: document.getElementById('tipo-visto').value,
-                comoEncontrou: document.getElementById('como-encontrou').value
-            };
+            const data = new FormData(form);
+            const jsonData = {};
+            data.forEach((value, key) => jsonData[key] = value);
+
             fetch('https://script.google.com/macros/s/AKfycbxIDqRGUisdjKiIiGZtAXH2oYII6Si6dcJcRZ3Bwy0qkc6i_9SCn7mDdLisIsSDhPhAWA/exec', {
                 method: 'POST',
+                mode: 'no-cors', // Necessário para evitar problemas de CORS
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
+                body: JSON.stringify(jsonData)
             })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    alert('Formulário enviado com sucesso! Entraremos em contato em breve.');
-                    form.reset();
-                } else {
-                    alert('Erro ao enviar o formulário. Tente novamente.');
-                }
+            .then(() => {
+                alert('Formulário enviado com sucesso! Entraremos em contato em breve.');
+                form.reset();
             })
             .catch(error => {
                 console.error('Erro:', error);
-                alert('Erro ao enviar. Verifique sua conexão.');
+                alert('Erro ao enviar. Tente novamente mais tarde.');
             });
         });
 
