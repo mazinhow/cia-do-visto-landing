@@ -3,110 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Especialistas em visto americano de turismo com 95% de aprovação. Atendimento online e suporte completo para o DS-160 e entrevista.">
+    <!-- SEO -->
+    <meta name="description" content="Consultoria especializada em visto americano de turismo com 95% de aprovação. Suporte completo para DS-160 e entrevista consular.">
     <meta name="keywords" content="visto americano, consultoria de visto, DS-160, entrevista consular, Cia do Visto, visto de turismo, agendamento consular">
+    <meta name="author" content="Cia do Visto">
     <meta property="og:title" content="Cia do Visto - Visto Americano com 95% de Aprovação">
     <meta property="og:description" content="Consultoria para visto de turismo com suporte completo e rápido.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Cia+do+Visto">
+    <meta property="og:image" content="https://ciadovisto.com.br/imagens/og-image.jpg">
     <meta property="og:url" content="https://ciadovisto.com.br">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cia do Visto - Visto Americano com 95% de Aprovação">
-    <meta name="twitter:description" content="Especialistas em visto de turismo. Atendimento online ou presencial.">
     <title>Visto Americano para Turismo | Consultoria Especializada | Cia do Visto</title>
-    <link rel="icon" href="https://via.placeholder.com/32x32?text=CV" type="image/x-icon">
+    <link rel="icon" href="https://ciadovisto.com.br/favicon.ico" type="image/x-icon">
+    <!-- Fontes e Estilos Externos -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Roboto', sans-serif; background: #E5E8EC; color: #333; line-height: 1.6; scroll-behavior: smooth; }
         h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: #003366; }
-        section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+        section { padding: 60px 20px; max-width: 1200px; margin: auto; }
         section:nth-child(even) { background-color: #F5F8FA; }
-        .btn { background: #2ECC71; color: white; padding: 15px 30px; border-radius: 8px; font-weight: bold; text-align: center; text-decoration: none; transition: background 0.3s ease; display: inline-block; }
-        .btn:hover { background: #27AE60; }
-        .card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-bottom: 4px solid #2ECC71; text-align: center; transition: transform 0.3s ease; }
+        .btn { 
+            background: #2ECC71; 
+            color: white; 
+            padding: 15px 30px; 
+            border-radius: 8px; 
+            font-weight: bold; 
+            text-align: center; 
+            text-decoration: none; 
+            transition: background 0.3s ease, transform 0.2s ease; 
+            display: inline-block; 
+        }
+        .btn:hover { background: #27AE60; transform: scale(1.05); }
+        .card { 
+            background: white; 
+            padding: 25px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+            border-bottom: 4px solid #2ECC71; 
+            text-align: center; 
+            transition: transform 0.3s ease; 
+        }
         .card:hover { transform: translateY(-5px); }
         .grid-3, .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
-        section h2 { font-size: 1.8em; margin-bottom: 30px; text-align: center; }
-        #countdown { background: #E74C3C; color: white; text-align: center; padding: 15px; font-weight: bold; font-size: 18px; position: fixed; width: 100%; z-index: 1001; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        header { background: #003366; padding: 20px 0; position: fixed; width: 100%; z-index: 1000; }
-        header .container { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        #hero { padding: 120px 0 60px; text-align: center; }
-        #hero h1 { font-size: 2.5em; margin-bottom: 10px; }
-        #hero p { font-size: 1.2em; margin-bottom: 20px; }
-        #hero .proof { font-size: 1em; color: #2ECC71; font-weight: bold; margin-bottom: 20px; }
-        #clientes-satisfeitos { text-align: center; background: #F5F8FA; padding: 20px; }
-        #clientes-satisfeitos h3 { font-size: 2em; color: #2ECC71; }
-        #video-institucional iframe { max-width: 100%; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        #video-institucional .btn { background: #003366; }
-        #etapas-processo .step { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
-        #etapas-processo i { font-size: 2rem; color: #2ECC71; }
-        #etapas .steps { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; }
-        #etapas .step { flex: 1 1 200px; }
-        #etapas i { font-size: 1.5rem; color: #2ECC71; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 10px; border-radius: 50%; }
-        #depoimentos .carousel { display: flex; overflow-x: auto; gap: 20px; padding-bottom: 10px; }
-        #depoimentos .card { min-width: 280px; position: relative; }
-        #depoimentos img { border-radius: 50%; width: 80px; height: 80px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        #depoimentos .social-link { position: absolute; bottom: 10px; right: 10px; font-size: 1.2rem; color: #2ECC71; }
-        #planos .highlight { background: #F5F8FA; border: 6px solid #2ECC71; animation: fadeIn 1s ease-in-out; }
-        #planos .card { animation: fadeIn 1s ease-in-out; }
-        #planos .highlight p:first-of-type { background: #E74C3C; color: white; padding: 8px; border-radius: 20px; font-weight: bold; display: inline-block; }
-        #planos .card p:nth-of-type(2) { font-size: 1.2em; font-weight: bold; }
-        #planos ul { list-style: none; text-align: left; margin: 15px 0; }
-        #planos ul li { margin: 5px 0; }
-        #formulario form { max-width: 500px; margin: auto; text-align: left; background: #FFFFFF; padding: 50px; border-radius: 10px; border: 1px solid #2ECC71; }
-        #formulario .guarantee { text-align: center; font-size: 1em; color: #2ECC71; margin-bottom: 20px; }
-        #formulario .selo { text-align: center; margin-top: 20px; }
-        input, select { font-size: 1em; padding: 12px; width: 100%; border-radius: 6px; border: 1px solid #ccc; margin-bottom: 16px; }
+        section h2 { font-size: 2em; margin-bottom: 30px; text-align: center; }
+        #countdown { 
+            background: #E74C3C; 
+            color: white; 
+            text-align: center; 
+            padding: 15px; 
+            font-weight: bold; 
+            font-size: 18px; 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1001; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+        }
+        header { 
+            background: #003366; 
+            padding: 20px 0; 
+            position: fixed; 
+            width: 100%; 
+            top: 48px; 
+            z-index: 1000; 
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        #hero { padding: 140px 0 60px; text-align: center; }
+        #hero h1 { font-size: 2.8em; margin-bottom: 15px; }
+        #hero p { font-size: 1.3em; margin-bottom: 25px; }
+        #hero .proof { font-size: 1.1em; color: #2ECC71; font-weight: bold; }
+        #clientes-satisfeitos h3 { font-size: 2.5em; color: #2ECC71; }
+        #video-institucional iframe { max-width: 100%; border-radius: 10px; }
+        #etapas-processo .step { display: flex; align-items: center; gap: 20px; margin-bottom: 25px; }
+        #etapas-processo i { font-size: 2.5rem; color: #2ECC71; }
+        #etapas .steps { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        #etapas .step { flex: 1 1 220px; }
+        #etapas i { font-size: 1.8rem; color: #2ECC71; padding: 12px; border-radius: 50%; background: #F5F8FA; }
+        #depoimentos .carousel { display: flex; overflow-x: auto; gap: 25px; padding-bottom: 15px; scroll-behavior: smooth; }
+        #depoimentos .card { min-width: 300px; position: relative; }
+        #depoimentos img { border-radius: 50%; width: 90px; height: 90px; object-fit: cover; }
+        #depoimentos .social-link { position: absolute; bottom: 15px; right: 15px; font-size: 1.5rem; color: #2ECC71; }
+        #planos .highlight { border: 6px solid #2ECC71; background: #F9F9F9; }
+        #planos .card p:nth-of-type(2) { font-size: 1.3em; font-weight: bold; color: #2ECC71; }
+        #planos ul { list-style: none; text-align: left; margin: 20px 0; }
+        #planos ul li { margin: 8px 0; }
+        #formulario form { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            background: #FFFFFF; 
+            padding: 40px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+        }
+        #formulario .guarantee { text-align: center; font-size: 1.1em; color: #2ECC71; margin-bottom: 25px; }
+        input, select { 
+            font-size: 1em; 
+            padding: 14px; 
+            width: 100%; 
+            border-radius: 6px; 
+            border: 1px solid #ccc; 
+            margin-bottom: 20px; 
+            transition: border-color 0.3s ease; 
+        }
+        input:focus, select:focus { border-color: #2ECC71; outline: none; }
         form button { width: 100%; }
-        #simulador .card { position: relative; }
-        #simulador .card button { background: #2ECC71; color: white; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; position: relative; }
-        #simulador .card button.loading::after { content: ''; display: inline-block; width: 16px; height: 16px; border: 2px solid white; border-top: 2px solid transparent; border-radius: 50%; animation: spin 1s linear infinite; margin-left: 10px; }
-        #simulador .card p { color: #2ECC71; font-weight: bold; }
-        #prova-social-tiktok-instagram .card iframe { height: 400px; }
-        #faq details summary { font-weight: bold; cursor: pointer; padding: 10px 0; }
-        #faq details summary i { margin-right: 8px; color: #2ECC71; }
-        #faq details[open] summary { color: #2ECC71; }
-        #selos .card { background: white; border: 2px solid #2ECC71; }
-        footer { background: #003366; color: white; text-align: center; padding: 40px 20px; }
-        footer .app-links { margin-top: 20px; }
-        footer .app-links a { margin: 0 10px; }
-        .whatsapp-float { position: fixed; bottom: 90px; right: 20px; background: #2ECC71; color: white; padding: 16px 24px; border-radius: 30px; font-weight: bold; text-decoration: none; z-index: 999; box-shadow: 0 2px 5px rgba(0,0,0,0.2); font-size: 16px; }
-        .chat-float { position: fixed; bottom: 150px; right: 20px; background: #E91E63; color: white; padding: 16px; border-radius: 50%; font-size: 20px; z-index: 999; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        #btnTopo { position: fixed; bottom: 80px; right: 20px; background: #003366; color: white; padding: 12px 18px; border-radius: 30px; text-decoration: none; font-weight: bold; z-index: 999; display: none; }
-        .cta-sticky-mobile-animated { position: fixed; bottom: 0; left: 0; width: 100%; background: #2ECC71; color: white; text-align: center; padding: 18px; font-size: 18px; font-weight: bold; text-decoration: none; z-index: 999; animation: pulse 1.5s infinite; }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        footer { background: #003366; color: white; text-align: center; padding: 50px 20px; }
+        .whatsapp-float { 
+            position: fixed; 
+            bottom: 90px; 
+            right: 20px; 
+            background: #2ECC71; 
+            color: white; 
+            padding: 16px 24px; 
+            border-radius: 30px; 
+            font-weight: bold; 
+            text-decoration: none; 
+            z-index: 999; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+            font-size: 16px; 
+            transition: transform 0.3s ease; 
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+        #btnTopo { 
+            position: fixed; 
+            bottom: 20px; 
+            right: 20px; 
+            background: #003366; 
+            color: white; 
+            padding: 12px 18px; 
+            border-radius: 50%; 
+            text-decoration: none; 
+            font-weight: bold; 
+            z-index: 999; 
+            display: none; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+        }
         @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         @media (max-width: 768px) {
-            #etapas .step { width: 100%; }
+            #hero h1 { font-size: 2em; }
+            #etapas .steps { flex-direction: column; }
             .grid-3, .grid-4 { grid-template-columns: 1fr; }
-            #hero h1 { font-size: 1.8em; }
+            header .container { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
 <body>
+    <!-- Contador Regressivo -->
     <div id="countdown">
         ⏳ Restam <span id="timer"></span> para garantir seu bônus exclusivo!
     </div>
 
+    <!-- Cabeçalho -->
     <header>
         <div class="container">
-            <img src="https://via.placeholder.com/150x40?text=Cia+do+Visto" alt="Logo Cia do Visto" style="max-height: 60px;">
-            <a href="#formulario" class="btn">Solicitar Agora Antes que Acabe!</a>
+            <img src="https://ciadovisto.com.br/logo.png" alt="Logo Cia do Visto" style="max-height: 60px;">
+            <a href="#formulario" class="btn" aria-label="Solicitar consultoria">Solicitar Agora!</a>
         </div>
     </header>
 
+    <!-- Hero -->
     <section id="hero">
         <div class="container">
             <h1>Conquiste Seu Visto Hoje com +95% de Sucesso!</h1>
             <p>Consultoria especializada para transformar seu sonho em realidade, com suporte total e agilidade.</p>
             <p class="proof">Mais de 5.000 vistos aprovados com sucesso!</p>
-            <a href="#formulario" class="btn">Solicitar Agora Antes que Acabe!</a>
+            <a href="#formulario" class="btn" aria-label="Solicitar consultoria agora">Solicitar Agora!</a>
         </div>
     </section>
 
+    <!-- Clientes Satisfeitos -->
     <section id="clientes-satisfeitos">
         <div class="container">
             <h3>+5.000 Clientes Satisfeitos</h3>
@@ -114,443 +181,238 @@
         </div>
     </section>
 
+    <!-- Vídeo Institucional -->
     <section id="video-institucional">
         <div class="container">
             <h2>Entenda Como Garantimos Seu Visto</h2>
-            <p>Veja o passo a passo do nosso processo simples e seguro:</p>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-                <iframe src="https://www.youtube.com/embed/2xQjZComofA" title="Vídeo Cia do Visto" frameborder="0" allowfullscreen loading="lazy"></iframe>
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
-                    <a href="#formulario" class="btn">Iniciar Meu Processo Agora!</a>
-                </div>
-            </div>
+            <p>Assista ao nosso vídeo explicativo:</p>
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/2xQjZComofA" title="Vídeo Institucional Cia do Visto" frameborder="0" allowfullscreen loading="lazy"></iframe>
         </div>
     </section>
 
+    <!-- Benefícios -->
     <section id="beneficios">
         <div class="container">
             <h2>Por Que Escolher a Cia do Visto?</h2>
             <div class="grid-3">
-                <div class="card" style="transition: transform 0.3s ease;">
-                    <i class="fa-solid fa-bolt" style="font-size: 2.5rem; color: #2ECC71; margin-bottom: 10px;"></i>
+                <div class="card">
+                    <i class="fa-solid fa-bolt" style="font-size: 2.5rem; color: #2ECC71; margin-bottom: 15px;"></i>
                     <h3>Resposta Rápida</h3>
-                    <p>Agendamento em até 2 dias úteis com nosso plano Ultra.</p>
+                    <p>Agendamento em até 2 dias úteis com o plano Ultra.</p>
                 </div>
-                <div class="card" style="transition: transform 0.3s ease;">
-                    <i class="fa-solid fa-users" style="font-size: 2.5rem; color: #2ECC71; margin-bottom: 10px;"></i>
+                <div class="card">
+                    <i class="fa-solid fa-users" style="font-size: 2.5rem; color: #2ECC71; margin-bottom: 15px;"></i>
                     <h3>Atendimento Multicanal</h3>
-                    <p>Suporte via WhatsApp, e-mail ou presencial, 24h por dia.</p>
+                    <p>Suporte via WhatsApp, e-mail ou presencial.</p>
                 </div>
-                <div class="card" style="transition: transform 0.3s ease;">
-                    <i class="fa-solid fa-credit-card" style="font-size: 2.5rem; color: #2ECC71; margin-bottom: 10px;"></i>
+                <div class="card">
+                    <i class="fa-solid fa-credit-card" style="font-size: 2.5rem; color: #2ECC71; margin-bottom: 15px;"></i>
                     <h3>Flexibilidade de Pagamento</h3>
-                    <p>Parcele em até 12x sem juros, com total segurança.</p>
+                    <p>Parcele em até 12x sem juros.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Etapas do Processo -->
     <section id="etapas-processo">
         <div class="container">
-            <h2>Veja as Etapas do Processo</h2>
-            <div class="steps">
+            <h2>Etapas do Processo</h2>
+            <div class="grid-3">
                 <div class="step">
                     <i class="fa-solid fa-laptop"></i>
                     <div>
                         <h3>1. Acesso à Plataforma</h3>
-                        <p>Escolha seu plano (Basic ou Ultra) e crie sua conta.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <i class="fa-solid fa-credit-card"></i>
-                    <div>
-                        <h3>2. Pagamento</h3>
-                        <p>Realize o pagamento e confirme a taxa de assessoria.</p>
+                        <p>Escolha seu plano e crie sua conta.</p>
                     </div>
                 </div>
                 <div class="step">
                     <i class="fa-solid fa-file-alt"></i>
                     <div>
-                        <h3>3. Preenchimento da Ficha</h3>
-                        <p>Preenchemos sua ficha de visto com as informações solicitadas.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <i class="fa-solid fa-money-bill"></i>
-                    <div>
-                        <h3>4. Taxa Consular</h3>
-                        <p>Realize o pagamento da taxa consular com nosso suporte.</p>
+                        <h3>2. Preenchimento DS-160</h3>
+                        <p>Preenchemos seu formulário com precisão.</p>
                     </div>
                 </div>
                 <div class="step">
                     <i class="fa-solid fa-calendar-check"></i>
                     <div>
-                        <h3>5. Comparecimento ao CASV</h3>
-                        <p>Compareça ao CASV para coleta de dados biométricos.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <i class="fa-solid fa-check-circle"></i>
-                    <div>
-                        <h3>6. Conclusão</h3>
-                        <p>Receba seu passaporte com o visto aprovado!</p>
+                        <h3>3. Agendamento e Entrevista</h3>
+                        <p>Suporte completo para o consulado.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="etapas">
-        <div class="container">
-            <h2>Seu Caminho para o Visto em 4 Passos</h2>
-            <div class="steps">
-                <div class="card step">
-                    <i class="fa-solid fa-clipboard"></i>
-                    <strong>1. Solicite Consultoria</strong>
-                    <p>Cadastro rápido e fácil pelo site.</p>
-                </div>
-                <div style="font-size: 2.5rem;">➡️</div>
-                <div class="card step">
-                    <i class="fa-solid fa-file-alt"></i>
-                    <strong>2. Formulário DS-160</strong>
-                    <p>Preenchimento expert sem complicações.</p>
-                </div>
-                <div style="font-size: 2.5rem;">➡️</div>
-                <div class="card step">
-                    <i class="fa-solid fa-users"></i>
-                    <strong>3. Entrevista Consular</strong>
-                    <p>Treinamento para garantir sua aprovação.</p>
-                </div>
-                <div style="font-size: 2.5rem;">➡️</div>
-                <div class="card step">
-                    <i class="fa-solid fa-passport"></i>
-                    <strong>4. Receba Seu Visto</strong>
-                    <p>Passaporte em mãos com tranquilidade.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Depoimentos -->
     <section id="depoimentos">
         <div class="container">
             <h2>✨ O Que Nossos Clientes Dizem</h2>
             <div class="carousel">
                 <div class="card">
-                    <img src="https://via.placeholder.com/80?text=Ana" alt="Ana S." loading="lazy">
-                    <p>“Simples, rápido e seguro. Meu visto saiu em semanas!” - Ana S.</p>
-                    <a href="https://instagram.com/ana_s" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <img src="https://ciadovisto.com.br/imagens/ana.jpg" alt="Foto de Ana S." loading="lazy">
+                    <p>“Rápido e seguro. Meu visto saiu em semanas!” - Ana S.</p>
+                    <a href="https://instagram.com/ana_s" class="social-link" aria-label="Instagram de Ana"><i class="fa-brands fa-instagram"></i></a>
                 </div>
                 <div class="card">
-                    <iframe src="https://www.youtube.com/embed/2xQjZComofA" title="Depoimento" frameborder="0" allowfullscreen loading="lazy" width="100%" height="250"></iframe>
+                    <img src="https://ciadovisto.com.br/imagens/joao.jpg" alt="Foto de João P." loading="lazy">
+                    <p>“Atendimento excepcional!” - João P.</p>
+                    <a href="https://instagram.com/joao_p" class="social-link" aria-label="Instagram de João"><i class="fa-brands fa-instagram"></i></a>
                 </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/80?text=João" alt="João P." loading="lazy">
-                    <p>“Atendimento excepcional, recomendo a todos!” - João P.</p>
-                    <a href="https://instagram.com/joao_p" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="#depoimentos" class="btn">Ver Mais Depoimentos</a>
             </div>
         </div>
     </section>
 
-    <section id="diferenciais">
-        <div class="container">
-            <h2>Nossos Diferenciais Fazem a Diferença</h2>
-            <div class="grid-4">
-                <div class="card"><h3><i class="fa-solid fa-clipboard-check" style="margin-right: 8px; color: #2ECC71;"></i> Assessoria Completa</h3><p>Do início ao pós-atendimento.</p></div>
-                <div class="card"><h3><i class="fa-solid fa-headset" style="margin-right: 8px; color: #2ECC71;"></i> Suporte 24h</h3><p>Atendimento humano via WhatsApp.</p></div>
-                <div class="card"><h3><i class="fa-solid fa-thumbs-up" style="margin-right: 8px; color: #2ECC71;"></i> +95% de Aprovação</h3><p>Resultados comprovados.</p></div>
-                <div class="card"><h3><i class="fa-solid fa-calendar-check" style="margin-right: 8px; color: #2ECC71;"></i> Agendamento Rápido</h3><p>Entrevista em tempo recorde.</p></div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Planos -->
     <section id="planos">
         <div class="container">
-            <h2>Escolha Seu Plano e Comece Hoje</h2>
+            <h2>Escolha Seu Plano</h2>
             <div class="grid-3">
                 <div class="card">
-                    <h3><i class="fa-solid fa-plane" style="margin-right: 8px; color: #2ECC71;"></i> Basic</h3>
+                    <h3>Basic</h3>
                     <p>R$ 499,00 ou 3x de R$ 166,33</p>
-                    <p>A solução ideal para quem busca eficiência e economia na obtenção do visto americano. Inclui todas as etapas essenciais com suporte acessível e eficaz.</p>
                     <ul>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Parcelamento em até 3x sem juros</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Ficha de visto com análise inteligente</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Preenchimento do formulário DS-160</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Agendamento da entrevista consular em até 7 dias úteis</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Análise detalhada de perfil</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Orientação personalizada para a entrevista consular</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Preenchimento DS-160</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Agendamento em até 7 dias</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Suporte básico</li>
                     </ul>
-                    <a href="#formulario" class="btn">Escolher Basic Agora</a>
+                    <a href="https://pay.kiwify.com.br/PqgQ7J7" class="btn" target="_blank" aria-label="Escolher Plano Basic">Escolher Basic</a>
                 </div>
                 <div class="card highlight">
-                    <p><strong>⚠️ Restam apenas 7 consultorias esta semana!</strong></p>
-                    <h3><i class="fa-solid fa-star" style="margin-right: 8px; color: #2ECC71;"></i> Ultra - Mais Popular!</h3>
+                    <h3>Ultra - Mais Popular!</h3>
                     <p>R$ 999,00 ou 12x de R$ 99,90</p>
-                    <p>A experiência premium para quem busca rapidez, prioridade e facilidade. Atendimento exclusivo com suporte completo e prioritário.</p>
                     <ul>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Parcelamento em até 12x sem juros</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Ficha de visto com análise inteligente</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Preenchimento do formulário DS-160</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Agendamento da entrevista consular em até 2 dias úteis</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Análise detalhada de perfil</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Orientação personalizada para a entrevista consular</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Fast Pass™ (adiantamento de entrevista)</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Entrega do passaporte a domicílio</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Atendimento prioritário</li>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Videoconferência com especialista de visto</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Preenchimento DS-160</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Agendamento em até 2 dias</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Suporte prioritário</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Fast Pass™</li>
                     </ul>
-                    <a href="#formulario" class="btn">Quero o Ultra Agora!</a>
+                    <a href="https://pay.kiwify.com.br/UHey3Ux" class="btn" target="_blank" aria-label="Escolher Plano Ultra">Escolher Ultra</a>
                 </div>
                 <div class="card">
-                    <h3><i class="fa-solid fa-users" style="margin-right: 8px; color: #2ECC71;"></i> Família/Grupo</h3>
+                    <h3>Família/Grupo</h3>
                     <p>Preço sob consulta</p>
-                    <p>Consultoria personalizada com descontos exclusivos para grupos.</p>
                     <ul>
-                        <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Consultoria personalizada com descontos para grupos</li>
+                        <li><i class="fa-solid fa-check" style="color: #2ECC71;"></i> Descontos para grupos</li>
                     </ul>
-                    <a href="#formulario" class="btn">Solicitar Cotação Agora</a>
+                    <a href="https://wa.me/5565999207108" class="btn" target="_blank" aria-label="Solicitar cotação para Família/Grupo">Solicitar Cotação</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="quem-somos">
-        <div class="container">
-            <h2>Quem Está Por Trás do Seu Sucesso</h2>
-            <div style="text-align: center;">
-                <img src="https://via.placeholder.com/150?text=Consultor" alt="Marcelo Oliveira" style="max-width: 150px; border-radius: 50%; margin-bottom: 20px;" loading="lazy">
-                <p><strong>Marcelo Oliveira</strong><br>Especialista em vistos americanos com mais de 8 anos de experiência, ajudando milhares de pessoas a realizarem o sonho de viajar para os EUA. Fundador da Cia do Visto, é apaixonado por transformar processos complexos em soluções simples e acessíveis.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="bonus">
-        <div class="container">
-            <h2>🎁 Bônus Exclusivo Só Até Sexta!</h2>
-            <p style="color: #E74C3C; font-weight: bold;">Apenas até sexta-feira, receba grátis:</p>
-            <ul style="list-style: none; font-size: 1.1em; max-width: 600px; margin: auto;">
-                <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Checklist personalizado</li>
-                <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Avaliação expressa em 24h</li>
-                <li><i class="fa-solid fa-check" style="color: #2ECC71; margin-right: 8px;"></i> Ebook com dicas exclusivas</li>
-            </ul>
-            <a href="#formulario" class="btn" style="margin-top: 20px;">Garantir Meus Bônus Agora!</a>
-        </div>
-    </section>
-
-    <section id="simulador">
-        <div class="container">
-            <h2>🧮 Simule Seu Investimento Agora</h2>
-            <p>Veja como parcelar seu plano com facilidade:</p>
-            <div class="card" style="max-width: 500px; margin: auto;">
-                <label for="plano">Escolha o plano:</label>
-                <select id="plano">
-                    <option value="499">Basic - R$499</option>
-                    <option value="999">Ultra - R$999</option>
-                </select>
-                <label for="parcelas">Número de parcelas:</label>
-                <select id="parcelas">
-                    <option value="1">1x</option>
-                    <option value="3">3x</option>
-                    <option value="6">6x</option>
-                    <option value="12">12x</option>
-                </select>
-                <button type="button" onclick="calcular()">Calcular</button>
-                <p id="resultado">Valor por parcela: R$0,00</p>
-            </div>
-        </div>
-    </section>
-
+    <!-- Formulário -->
     <section id="formulario">
         <div class="container">
-            <h2>Inicie Seu Processo Hoje!</h2>
-            <p class="guarantee">Seus dados estão 100% seguros conosco!</p>
+            <h2>Inicie Seu Processo Agora!</h2>
+            <p class="guarantee">Seus dados estão 100% seguros!</p>
             <form id="consultoria-form">
-                <label>Nome Completo:</label><input name="nome" required>
-                <label>Telefone (WhatsApp):</label><input name="telefone" required>
-                <label>Email:</label><input name="email" type="email" required>
-                <label>Tipo de Visto:</label>
-                <select name="tipo-visto" required>
+                <label for="nome">Nome Completo:</label>
+                <input id="nome" name="nome" required aria-required="true">
+                <label for="telefone">Telefone (WhatsApp):</label>
+                <input id="telefone" name="telefone" required aria-required="true">
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email" required aria-required="true">
+                <label for="tipo-visto">Tipo de Visto:</label>
+                <select id="tipo-visto" name="tipo-visto" required aria-required="true">
                     <option value="">Selecione</option>
-                    <option>Turismo</option>
-                    <option>Negócios</option>
+                    <option value="Turismo">Turismo</option>
+                    <option value="Negócios">Negócios</option>
                 </select>
-                <label>Como nos encontrou? (opcional)</label>
-                <select name="como-encontrou">
+                <label for="como-encontrou">Como nos encontrou? (opcional)</label>
+                <select id="como-encontrou" name="como-encontrou">
                     <option value="">Selecione</option>
-                    <option>Instagram</option>
-                    <option>Google</option>
-                    <option>Indicação</option>
-                    <option>Facebook</option>
-                    <option>Outro</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Google">Google</option>
+                    <option value="Indicação">Indicação</option>
                 </select>
-                <button type="submit" class="btn">Solicitar Consultoria Agora!</button>
+                <button type="submit" class="btn" aria-label="Enviar formulário">Solicitar Consultoria!</button>
             </form>
-            <div class="selo">
-                <img src="https://via.placeholder.com/100?text=Site+Seguro" alt="Selo de Segurança" loading="lazy">
-                <p>Site Seguro - Seus dados estão protegidos!</p>
-            </div>
         </div>
     </section>
 
-    <section id="prova-social-tiktok-instagram">
-        <div class="container">
-            <h2>📲 Veja Nosso Sucesso no TikTok & Instagram</h2>
-            <div class="grid-3">
-                <div class="card"><iframe src="https://via.placeholder.com/300?text=TikTok" loading="lazy" width="100%" height="400"></iframe></div>
-                <div class="card"><iframe src="https://via.placeholder.com/300?text=Instagram" loading="lazy" width="100%" height="400"></iframe></div>
-                <div class="card"><iframe src="https://via.placeholder.com/300?text=TikTok" loading="lazy" width="100%" height="400"></iframe></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq">
-        <div class="container">
-            <h2>Perguntas Frequentes</h2>
-            <details>
-                <summary><i class="fa-solid fa-question"></i> Quais documentos preciso para tirar o visto?</summary>
-                <p>Você precisará de passaporte válido, foto 5x7, formulário DS-160 preenchido e comprovantes (se solicitado).</p>
-            </details>
-            <details>
-                <summary><i class="fa-solid fa-question"></i> Qual a taxa consular para o visto americano?</summary>
-                <p>A taxa consular é de USD 185, que pode ser parcelada em até 12x no plano Ultra.</p>
-            </details>
-            <details>
-                <summary><i class="fa-solid fa-question"></i> Quanto tempo demora para obter o visto?</summary>
-                <p>O processo leva de 15 a 30 dias, dependendo do plano escolhido e da disponibilidade consular.</p>
-            </details>
-            <details>
-                <summary><i class="fa-solid fa-question"></i> Vocês agendam a entrevista consular para mim?</summary>
-                <p>Sim, agendamos sua entrevista em até 2 dias úteis (plano Ultra) ou 7 dias úteis (plano Basic).</p>
-            </details>
-            <details>
-                <summary><i class="fa-solid fa-question"></i> Posso parcelar o pagamento do serviço?</summary>
-                <p>Sim, parcelamos em até 12x sem juros no plano Ultra ou 3x no plano Basic.</p>
-            </details>
-            <details>
-                <summary><i class="fa-solid fa-question"></i> Vocês atendem clientes de todo o Brasil?</summary>
-                <p>Sim, nosso atendimento é 100% online, com opção presencial em Cuiabá - MT.</p>
-            </details>
-            <details>
-                <summary><i class="fa-solid fa-question"></i> E se meu visto for negado?</summary>
-                <p>Oferecemos suporte gratuito para reaplicação, ajustando o que for necessário.</p>
-            </details>
-            <details>
-                <summary><i class="fa-solid fa-question"></i> Preciso falar inglês para a entrevista?</summary>
-                <p>Não, a entrevista pode ser em português, e nós te preparamos para isso.</p>
-            </details>
-            <details>
-                <summary><i class="fa-solid fa-question"></i> O processo é 100% online?</summary>
-                <p>Sim, exceto pela entrevista consular e coleta biométrica, que são presenciais.</p>
-            </details>
-            <details>
-                <summary><i class="fa-solid fa-question"></i> Vocês ajudam na renovação de vistos?</summary>
-                <p>Sim, auxiliamos na renovação com o mesmo suporte completo.</p>
-            </details>
-        </div>
-    </section>
-
-    <section id="selos">
-        <div class="container">
-            <h2>Confiança Reconhecida</h2>
-            <div class="grid-3" style="text-align: center;">
-                <div class="card"><img src="https://via.placeholder.com/120?text=Trustpilot" alt="Trustpilot" loading="lazy"><p><a href="#">Avaliações no Trustpilot</a></p></div>
-                <div class="card"><img src="https://via.placeholder.com/120?text=Reclame+Aqui" alt="Reclame Aqui" loading="lazy"><p><a href="#">Perfil no Reclame Aqui</a></p></div>
-                <div class="card"><img src="https://via.placeholder.com/120?text=Google" alt="Google" loading="lazy"><p><a href="#">Google Meu Negócio</a></p></div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Rodapé -->
     <footer>
         <div class="container">
             <p><strong>Cia do Visto</strong></p>
-            <p>Atendimento online em todo o Brasil | Presencial em Cuiabá - MT</p>
+            <p>Atendimento online em todo o Brasil</p>
             <p>WhatsApp: <a href="https://wa.me/5565999207108" style="color: white;">+55 65 99920-7108</a></p>
-            <p>Email: <a href="#" style="color: white;">contato@ciadovisto.com.br</a></p>
-            <p>
-                <a href="#" style="color: white;">Instagram</a> |
-                <a href="#" style="color: white;">Facebook</a>
-            </p>
-            <div class="app-links">
-                <a href="https://www.apple.com/app-store/" target="_blank"><img src="https://via.placeholder.com/120x40?text=App+Store" alt="App Store" loading="lazy"></a>
-                <a href="https://play.google.com/store" target="_blank"><img src="https://via.placeholder.com/120x40?text=Google+Play" alt="Google Play" loading="lazy"></a>
-            </div>
-            <p><a href="#" style="color: white;">Política de Privacidade</a></p>
+            <p>Email: <a href="mailto:contato@ciadovisto.com.br" style="color: white;">contato@ciadovisto.com.br</a></p>
+            <p>© 2023 Cia do Visto. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <a class="whatsapp-float" href="https://wa.me/5565999207108" target="_blank">💬 Fale Agora com Especialista</a>
-    <a class="chat-float" href="#chat" target="_blank"><i class="fa-solid fa-comment"></i></a>
-    <a href="#" id="btnTopo"><i class="fa-solid fa-arrow-up" style="margin-right: 5px;"></i> Topo</a>
-    <a class="cta-sticky-mobile-animated" href="#formulario">🚀 Solicitar Agora Antes que Acabe!</a>
+    <!-- Botões Flutuantes -->
+    <a class="whatsapp-float" href="https://wa.me/5565999207108" target="_blank" aria-label="Fale com um especialista via WhatsApp">💬 Fale Agora!</a>
+    <a href="#" id="btnTopo" aria-label="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></a>
 
-    <div id="thankyou" style="display: none; padding: 50px; text-align: center;">
-        <h1>Seu Visto Está a Caminho!</h1>
-        <p>Obrigado por confiar na Cia do Visto! Estamos empolgados para ajudá-lo. Em breve, entraremos em contato!</p>
-        <iframe src="https://www.youtube.com/embed/2xQjZComofA" title="Mensagem Especial" frameborder="0" allowfullscreen loading="lazy" width="560" height="315"></iframe>
-    </div>
-
+    <!-- Scripts -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
         // Contador Regressivo
         const countdown = () => {
-            const end = new Date().getTime() + 72 * 60 * 60 * 1000;
+            const end = new Date().getTime() + 72 * 60 * 60 * 1000; // 72 horas
             const update = () => {
                 const now = new Date().getTime();
                 const distance = end - now;
+                if (distance < 0) {
+                    document.getElementById('timer').innerText = "Oferta Expirada!";
+                    return;
+                }
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
                 document.getElementById('timer').innerText = `${hours}h ${minutes}m ${seconds}s`;
-                if (distance < 0) clearInterval(interval);
             };
             update();
-            const interval = setInterval(update, 1000);
+            setInterval(update, 1000);
         };
         countdown();
 
-        // Simulador de Parcelas com Efeito de Carregamento
-        const plano = document.getElementById('plano');
-        const parcelas = document.getElementById('parcelas');
-        const resultado = document.getElementById('resultado');
-        const calcularBtn = document.querySelector('#simulador button');
-        function calcular() {
-            calcularBtn.classList.add('loading');
-            setTimeout(() => {
-                const valor = parseFloat(plano.value);
-                const p = parseInt(parcelas.value);
-                resultado.innerText = 'Valor por parcela: R$' + (valor / p).toFixed(2).replace('.', ',');
-                calcularBtn.classList.remove('loading');
-            }, 1000);
-        }
-
-        // Formulário - Mostrar Thank You
+        // Formulário para Google Sheets
         const form = document.getElementById('consultoria-form');
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            document.getElementById('countdown').style.display = 'none';
-            document.querySelector('header').style.display = 'none';
-            document.querySelectorAll('section, footer, .whatsapp-float, .chat-float, #btnTopo, .cta-sticky-mobile-animated').forEach(el => el.style.display = 'none');
-            document.getElementById('thankyou').style.display = 'block';
+            const data = {
+                nome: document.getElementById('nome').value,
+                telefone: document.getElementById('telefone').value,
+                email: document.getElementById('email').value,
+                tipoVisto: document.getElementById('tipo-visto').value,
+                comoEncontrou: document.getElementById('como-encontrou').value
+            };
+            fetch('https://script.google.com/macros/s/AKfycbxIDqRGUisdjKiIiGZtAXH2oYII6Si6dcJcRZ3Bwy0qkc6i_9SCn7mDdLisIsSDhPhAWA/exec', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert('Formulário enviado com sucesso! Entraremos em contato em breve.');
+                    form.reset();
+                } else {
+                    alert('Erro ao enviar o formulário. Tente novamente.');
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao enviar. Verifique sua conexão.');
+            });
         });
 
         // Botão Voltar ao Topo
-        document.addEventListener("scroll", function() {
-            const btn = document.getElementById("btnTopo");
-            if (window.scrollY > 300) btn.style.display = "block";
-            else btn.style.display = "none";
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('btnTopo');
+            btn.style.display = window.scrollY > 300 ? 'block' : 'none';
         });
 
-        // Animações ScrollReveal
-        ScrollReveal().reveal('section', {
+        // Animações com ScrollReveal
+        ScrollReveal().reveal('.card, section h2', {
             delay: 200,
             duration: 800,
-            distance: '50px',
+            distance: '30px',
             origin: 'bottom',
-            easing: 'ease-in-out',
-            reset: false
+            easing: 'ease-in-out'
         });
     </script>
 </body>
